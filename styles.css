@@ -3,6 +3,7 @@
   justify-content: space-between;
 }
 
+/* ESTO ES PARA DARLE FONDO CELESTE A LA FILA SOBRE LA CUAL PASA EL MOUSE */
 tr:hover {
 background-color: skyblue;
 }

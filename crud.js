@@ -5,7 +5,7 @@ import cars from './cars.js';
 function printCars() {
   mainTbody.innerHTML = ''
   for(let i = 0; i < cars.length; i++) {
-      const row = `<tr id = "${cars[i].id}" onClick = "loadData(${i})">
+      const row = `<tr id = "${i}" onClick = "loadData(${i})">
                       <td>${cars[i].id}</td>
                       <td>${cars[i].brand}</td>
                       <td>${cars[i].model}</td>
@@ -34,7 +34,7 @@ function loadData(indexArray) {
 
 // Funcion para agregar datos 
 function addData() {
-   cars.push({
+    cars.push({
     id:cars.length+1,
     brand: brandInput.value,
     model: modelInput.value,
@@ -47,7 +47,7 @@ function addData() {
 }
 
 // funcion para editar los datos
-function editData () {
+function editData() {
   const position = idInput.value;
   let newValue = {
     id: 1, 
@@ -68,14 +68,20 @@ function deleteCars() {
   const position = idInput.value;
   cars.splice (position, 1);
   printCars();
-  alert("¡Exito! Registro ELIMINADO")
-  }
+  // cars.splice (position, 1);
+  // cars.pop();
+  // cleanValues();
+  // alert(position)
+  // printCars();
+  // alert("¡Exito! Registro ELIMINADO");
+}
+
   
   
 
 
 // funcion para limpiar los inputs
-function cleanValues (){
+function cleanValues(){
   idInput.value = '';
   brandInput.value = '';
   modelInput.value = '';

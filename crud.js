@@ -81,7 +81,7 @@ function addData() {
 function editData() {
   const position = idInput.value;
   let newValue = {
-    id: 1, 
+    id: idInput.value, 
     brand: brandInput.value, 
     model: modelInput.value, 
     color: colorInput.value, 

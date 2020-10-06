@@ -1,6 +1,6 @@
 import cars from './cars.js';
 
-// Esta funcion imprime el ID junto con la linea para poderla seleccionar con un click luego, para que cada fila teng su id estampado
+// Esta funcion escribe las filas en el HTML, para que cada fila teng su ID estampado y mande a llamar la funcion load data cuando se le de click
 
 function printCars() {
   mainTbody.innerHTML = ''
@@ -54,13 +54,12 @@ function loadData(indexArray) {
   }
 
   // AQUI SE LLENAN LOS INPUTS
-  let wichSelect = indexArray;
-  idInput.value = cars[wichSelect].id
-  brandInput.value = cars[wichSelect].brand
-  modelInput.value = cars[wichSelect].model
-  colorInput.value = cars[wichSelect].color
-  yearInput.value = cars[wichSelect].year
-  priceInput.value = cars[wichSelect].price 
+        idInput.value = cars[indexArray].id
+        brandInput.value = cars[indexArray].brand
+        modelInput.value = cars[indexArray].model
+        colorInput.value = cars[indexArray].color
+        yearInput.value = cars[indexArray].year
+        priceInput.value = cars[indexArray].price 
 }
 
 // Funcion para agregar datos 

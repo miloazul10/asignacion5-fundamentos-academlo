@@ -12,7 +12,9 @@ background-color: skyblue;
 }
 
 h1 {
-  text-align: center ;
+  text-align: left ;
+  color: rgba(63, 107, 201, 0.808);
+  margin-bottom: 20px;
 }
 
 #dataTable {

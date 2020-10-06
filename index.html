@@ -11,58 +11,68 @@
 <body>
   <div class="container mt-5">
     <h1>
-      CRUD coches
+      - CRUD coches -
     </h1>
+    <HR></HR>
     <!-- FORMULARIO DE LECTURA Y EDICION -->
-    <form>
-      <div class="form-group">
-        <label for="idInput">ID</label>
-        <input class="form-control" id="idInput" disabled placeholder="El Numero ID se agregara o modificara automaticamente">
-      </div>
-      <div class="form-group">
-        <label for="brandInput">Marca</label>
-        <input class="form-control" id="brandInput" placeholder="Seleccione un elemento o escribe Nuevos valores para Agregar">
-      </div>
-      <div class="form-group">
-        <label for="modelInput">Modelo</label>
-        <input class="form-control" id="modelInput" placeholder="Seleccione un elemento o escribe Nuevos valores para Agregar">
-      </div>
-      <div class="form-group">
-        <label for="colorInput">Color</label>
-        <input class="form-control" id="colorInput" placeholder="Seleccione un elemento o escribe Nuevos valores para Agregar">
-      </div>
-      <div class="form-group">
-        <label for="yearInput">Año</label>
-        <input class="form-control" id="yearInput" placeholder="Seleccione un elemento do escribe Nuevos valores para Agregar">
-      </div>
-      <div class="form-group">
-        <label for="priceInput">Precio($Dolares)</label>
-        <input class="form-control" id="priceInput" placeholder="Seleccione un elemento o escribe Nuevos valores para Agregar">
-      </div>
-    
-    </form>
+    <div class="row">
+      <div class="col col-md-auto">
+        <form>
+          <div class="form-group">
+            <label for="idInput">ID</label>
+            <input class="form-control" id="idInput" disabled placeholder="El Numero ID se agregara o modificara automaticamente">
+            <small id="idHelp" class="form-text text-muted">No puede cambiar este valor porque se generará automaticamente</small>
+          </div>
+          <div class="form-group">
+            <label for="brandInput">Marca</label>
+            <input class="form-control" id="brandInput" placeholder="Seleccione un elemento o escribe Nuevos valores para Agregar">
+          </div>
+          <div class="form-group">
+            <label for="modelInput">Modelo</label>
+            <input class="form-control" id="modelInput" placeholder="Seleccione un elemento o escribe Nuevos valores para Agregar">
+          </div>
+          <div class="form-group">
+            <label for="colorInput">Color</label>
+            <input class="form-control" id="colorInput" placeholder="Seleccione un elemento o escribe Nuevos valores para Agregar">
+          </div>
+          <div class="form-group">
+            <label for="yearInput">Año</label>
+            <input class="form-control" id="yearInput" placeholder="Seleccione un elemento do escribe Nuevos valores para Agregar">
+          </div>
+          <div class="form-group">
+            <label for="priceInput">Precio($Dolares)</label>
+            <input class="form-control" id="priceInput" placeholder="Seleccione un elemento o escribe Nuevos valores para Agregar">
+          </div>
+        
+        </form>
 
-    <div class="spaceButtons">
-      <button onclick="addData()" class="btn btn-success"> Agregar </button>
-      <button onclick="editData()" class="btn btn-warning"> Editar </button>
-      <button onclick="deleteCars()" class="btn btn-danger"> Eliminar </button>
+        <div class="spaceButtons">
+          <button onclick="addData()" class="btn btn-success"> Agregar </button>
+          <button onclick="editData()" class="btn btn-warning"> Editar </button>
+          <button onclick="deleteCars()" class="btn btn-danger"> Eliminar </button>
+        </div>
+      </div>
+
+      <div class="col col-md-auto">
+        <div id = dataTable>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Color</th>
+                <th>Año</th>
+                <th>Precio</th>
+              </tr>
+            </thead>
+            <tbody id="mainTbody">
+            <!-- AQUI SE LLENA CON LOS DATOS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-  <div id = dataTable>
-    <table class="table mt-5">
-      <thead>
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Marca</th>
-          <th scope="col">Modelo</th>
-          <th scope="col">Color</th>
-          <th scope="col">Año</th>
-          <th scope="col">Precio</th>
-        </tr>
-      </thead>
-      <tbody id="mainTbody">
-      <!-- AQUI SE LLENA CON LOS DATOS -->
-      </tbody>
-    </table>
   </div>
   
   <script type="module" src="./crud.js"></script>

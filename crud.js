@@ -90,7 +90,7 @@ function editData() {
   }
   cars.splice (position, 1, newValue)
   cleanValues();
-  alert("¡Exito! Registro EDITADO")
+  // alert("¡Exito! Registro EDITADO")
 }
 
 

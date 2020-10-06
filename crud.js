@@ -1,6 +1,6 @@
 import cars from './cars.js';
 
-// Esta funcion imprime el ID que es el mismo que el inidice en el html para que cada fila teng su id estampado
+// Esta funcion imprime el ID junto con la linea para poderla seleccionar con un click luego, para que cada fila teng su id estampado
 
 function printCars() {
   mainTbody.innerHTML = ''
@@ -65,16 +65,13 @@ function editData () {
 
 // Funcion para eliminar los datos
 function deleteCars() {
-  let indicador = idInput.value;
-  if (indicador == cars.length){
-    cars.pull
-  } else {
-    cars.splice (indicador, 1)
-  printCars()
-          }
+  const position = idInput.value;
+  cars.splice (position, 1);
+  printCars();
+  alert("¡Exito! Registro ELIMINADO")
   }
   
-  // alert("¡Exito! Registro ELIMINADO")
+  
 
 
 // funcion para limpiar los inputs

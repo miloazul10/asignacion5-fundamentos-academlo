@@ -14,24 +14,28 @@
     <!-- FORMULARIO DE LECTURA Y EDICION -->
     <form>
       <div class="form-group">
+        <label for="idInput">ID</label>
+        <input class="form-control" id="idInput" disabled>
+      </div>
+      <div class="form-group">
         <label for="brandInput">Marca</label>
-        <input class="form-control" id="brandInput">
+        <input class="form-control" id="brandInput" placeholder="Seleccione un elemento o escribe Nuevos valores para Agregar">
       </div>
       <div class="form-group">
         <label for="modelInput">Modelo</label>
-        <input class="form-control" id="modelInput">
+        <input class="form-control" id="modelInput" placeholder="Seleccione un elemento o escribe Nuevos valores para Agregar">
       </div>
       <div class="form-group">
         <label for="colorInput">Color</label>
-        <input class="form-control" id="colorInput">
+        <input class="form-control" id="colorInput" placeholder="Seleccione un elemento o escribe Nuevos valores para Agregar">
       </div>
       <div class="form-group">
         <label for="yearInput">Año</label>
-        <input class="form-control" id="yearInput">
+        <input class="form-control" id="yearInput" placeholder="Seleccione un elemento do escribe Nuevos valores para Agregar">
       </div>
       <div class="form-group">
         <label for="priceInput">Precio($Dolares)</label>
-        <input class="form-control" id="priceInput">
+        <input class="form-control" id="priceInput" placeholder="Seleccione un elemento o escribe Nuevos valores para Agregar">
       </div>
     
     </form>
@@ -39,7 +43,7 @@
     <div class="spaceButtons">
       <button onclick="addData()" class="btn btn-success"> Agregar </button>
       <button onclick="editData()" class="btn btn-warning"> Editar </button>
-      <button onclick="NOMBREFUNCION" class="btn btn-danger"> Eliminar </button>
+      <button onclick="deleteCars()" class="btn btn-danger"> Eliminar </button>
     </div>
 
     <table class="table">
@@ -57,7 +61,6 @@
       <!-- AQUI SE LLENA CON LOS DATOS -->
       </tbody>
     </table>
-
   </div>
   
   <script type="module" src="./crud.js"></script>

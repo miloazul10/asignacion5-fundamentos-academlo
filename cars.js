@@ -1,6 +1,6 @@
 const cars = [
   {
-    id: 1,
+    id: 0,
     brand: 'Toyota',
     model: 'Yaris',
     color: 'Crema',
@@ -8,7 +8,7 @@ const cars = [
     price: 6000
   },
   {
-    id: 2,
+    id: 1,
     brand: 'Honda',
     model: 'crv',
     color: 'plata',
@@ -16,7 +16,7 @@ const cars = [
     price: 15000
   },  
   {
-    id: 3,
+    id: 2,
     brand: 'Hyundai',
     model: 'Accent',
     color: 'Rojo',
@@ -24,7 +24,7 @@ const cars = [
     price: 12000
   },  
   {
-    id: 4,
+    id: 3,
     brand: 'Susuki',
     model: 'Jimny',
     color: 'Verde',
@@ -32,7 +32,7 @@ const cars = [
     price: 9000
   },  
   {
-    id: 5,
+    id: 4,
     brand: 'Tesla',
     model: 'S',
     color: 'Gris',

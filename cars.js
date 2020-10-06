@@ -1,46 +1,6 @@
-const cars = [
+const cars = [ 
   {
     id: 0,
-    brand: 'Toyota',
-    model: 'Yaris',
-    color: 'Crema',
-    year: '2006',
-    price: 6000
-  },
-  {
-    id: 1,
-    brand: 'Honda',
-    model: 'crv',
-    color: 'plata',
-    year: '2015',
-    price: 15000
-  },  
-  {
-    id: 2,
-    brand: 'Hyundai',
-    model: 'Accent',
-    color: 'Rojo',
-    year: '2010',
-    price: 12000
-  },  
-  {
-    id: 3,
-    brand: 'Susuki',
-    model: 'Jimny',
-    color: 'Verde',
-    year: '2008',
-    price: 9000
-  },  
-  {
-    id: 4,
-    brand: 'Tesla',
-    model: 'S',
-    color: 'Gris',
-    year: '2015',
-    price: 75000
-  },
-  {
-    id: 5,
     brand: 'Chevrolet',
     model: 'Aveo',
     color: 'Blanco',
@@ -48,7 +8,7 @@ const cars = [
     price: 5000
   },
   {
-    id: 6,
+    id: 1,
     brand: 'BMW',
     model: 'X6',
     color: 'Celeste',
@@ -56,15 +16,7 @@ const cars = [
     price: 17000
   },
   {
-    id: 7,
-    brand: 'Tesla',
-    model: 'X',
-    color: 'Blanco',
-    year: '2019',
-    price: 87000
-  },
-  {
-    id: 8,
+    id: 2,
     brand: 'volkswagen',
     model: 'Nivus',
     color: 'Celeste',
@@ -72,7 +24,7 @@ const cars = [
     price: 14000
   },
   {
-    id: 9,
+    id: 3,
     brand: 'Ford',
     model: 'Escape',
     color: 'Azul',
@@ -80,7 +32,7 @@ const cars = [
     price: 21000
   },
   {
-    id: 10,
+    id: 4,
     brand: 'Kia',
     model: 'Rio',
     color: 'Morado',
@@ -88,7 +40,7 @@ const cars = [
     price: 4000
   },
   {
-    id: 11,
+    id: 5,
     brand: 'Ferrari',
     model: 'SF90',
     color: 'Rojo',
@@ -96,7 +48,7 @@ const cars = [
     price: 157000
   },
   {
-    id: 12,
+    id: 6,
     brand: 'Bugatti',
     model: 'Divo',
     color: 'Plateado',
@@ -104,7 +56,7 @@ const cars = [
     price: 10000000
   },
   {
-    id: 13,
+    id: 7,
     brand: 'Porche',
     model: '911',
     color: 'Amarillo',
@@ -112,7 +64,7 @@ const cars = [
     price: 19000
   },
   {
-    id: 14,
+    id: 8,
     brand: 'Tesla',
     model: 'Model 3',
     color: 'Azul',
@@ -120,7 +72,7 @@ const cars = [
     price: 35000
   },
   {
-    id: 15,
+    id: 9,
     brand: 'Peugeot',
     model: '3008',
     color: 'Verde',
@@ -128,7 +80,7 @@ const cars = [
     price: 25000
   },
   {
-    id: 16,
+    id: 10,
     brand: 'Lada',
     model: 'Niva',
     color: 'Roja',
@@ -136,7 +88,7 @@ const cars = [
     price: 2000
   },
   {
-    id: 17,
+    id: 11,
     brand: 'Foton',
     model: 'Tunland',
     color: 'Gris',
@@ -144,7 +96,7 @@ const cars = [
     price: 12000
   },
   {
-    id: 18,
+    id: 12,
     brand: 'Range Rover',
     model: 'Sentinel',
     color: 'Azul Oscuro',

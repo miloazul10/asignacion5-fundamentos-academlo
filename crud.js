@@ -65,8 +65,15 @@ function loadData(indexArray) {
 
 // Funcion para agregar datos 
 function addData() {
+  // PARA DARLE CONTINUIDAD AL ID
+  let maxi = 0
+  for(let i = 0; i < cars.length; i++) {
+    if(cars[i].id > maxi){
+      maxi = cars[i].id
+    }
+  }
     cars.push({
-    id:cars.length+1,
+    id: maxi + 1,
     brand: brandInput.value,
     model: modelInput.value,
     color: colorInput.value,
@@ -74,42 +81,46 @@ function addData() {
     price:priceInput.value
   });
   cleanValues();
-  alert("¡Exito! Registro CREADO")
+  
+  // alert("¡Exito! Registro CREADO")
+ 
 }
 
 // funcion para editar los datos
 function editData() {
-  const position = idInput.value;
-  let newValue = {
-    id: idInput.value, 
-    brand: brandInput.value, 
-    model: modelInput.value, 
-    color: colorInput.value, 
-    year: yearInput.value, 
-    price: priceInput.value
+  for(let i = 0; i < cars.length; i++) {
+    if (cars[i].id == idInput.value){
+      let newValue = {
+        id: idInput.value, 
+        brand: brandInput.value, 
+        model: modelInput.value, 
+        color: colorInput.value, 
+        year: yearInput.value, 
+        price: priceInput.value
+      }
+      cars.splice (i, 1, newValue)
+      cleanValues();
+    }
   }
-  cars.splice (position, 1, newValue)
-  cleanValues();
-  // alert("¡Exito! Registro EDITADO")
 }
-
 
 // Funcion para eliminar los datos
 function deleteCars() {
-  const position = idInput.value;
-  cars.splice (position, 1);
-  printCars();
-  // cars.splice (position, 1);
-  // cars.pop();
-  // cleanValues();
-  // alert(position)
-  // printCars();
-  // alert("¡Exito! Registro ELIMINADO");
+ 
+  if (idInput.value != cars.length){
+    for(let i = 0; i < cars.length; i++) {
+      if (cars[i].id == idInput.value){
+        cars.splice (i, 1)
+        cleanValues();
+      }
+    }
+  }
+  // ESTE IF LO PUSE PORQUE NO ME ELIMINABA EL ULTIMO EN ALGUNAS CIRCUNSTANCIAS
+  else{
+    cars.pop();
+    cleanValues();
+  }
 }
-
-  
-  
-
 
 // funcion para limpiar los inputs
 function cleanValues(){

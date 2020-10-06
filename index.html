@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD Asignacion 5 ACADEMLO</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./styles.css">
+
+</head>
+<body>
+  <div class="container mt-5">
+
+    <!-- FORMULARIO DE LECTURA Y EDICION -->
+    <form>
+      <div class="form-group">
+        <label for="brandInput">Marca</label>
+        <input class="form-control" id="brandInput">
+      </div>
+      <div class="form-group">
+        <label for="modelInput">Modelo</label>
+        <input class="form-control" id="modelInput">
+      </div>
+      <div class="form-group">
+        <label for="colorInput">Color</label>
+        <input class="form-control" id="colorInput">
+      </div>
+      <div class="form-group">
+        <label for="yearInput">Año</label>
+        <input class="form-control" id="yearInput">
+      </div>
+      <div class="form-group">
+        <label for="priceInput">Precio($Dolares)</label>
+        <input class="form-control" id="priceInput">
+      </div>
+    
+    </form>
+
+    <div class="spaceButtons">
+      <button onclick="addData()" class="btn btn-success"> Agregar </button>
+      <button onclick="editData()" class="btn btn-warning"> Editar </button>
+      <button onclick="NOMBREFUNCION" class="btn btn-danger"> Eliminar </button>
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Marca</th>
+          <th scope="col">Modelo</th>
+          <th scope="col">Color</th>
+          <th scope="col">Año</th>
+          <th scope="col">Precio</th>
+        </tr>
+      </thead>
+      <tbody id="mainTbody">
+      <!-- AQUI SE LLENA CON LOS DATOS -->
+      </tbody>
+    </table>
+
+  </div>
+  
+  <script type="module" src="./crud.js"></script>
+</body>
+</html>

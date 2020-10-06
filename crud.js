@@ -20,7 +20,7 @@ function printCars() {
                       <td>${cars[i].color}</td>
                       <td>${cars[i].year}</td>
                       <td> $ ${cars[i].price}</td>
-                      <td> <button onclick="NOMBREFUNCION" class="btn btn-primary"> Seleccionar </button> </td>
+
                   </tr>`
       mainTbody.innerHTML += row;
   }
@@ -30,6 +30,8 @@ function printCars() {
 // ESTA FUNCION RECIBE EL DATO DE QUE FILA FUE SELECCIONADA EN EL HTML Y CARGA LOS DATOS EN LOS INPUTS
 function loadData(indexArray) {
   let wichSelect = indexArray;
+  active = document.getElementById(wichSelect)
+  
   idInput.value = cars[wichSelect].id
   brandInput.value = cars[wichSelect].brand
   modelInput.value = cars[wichSelect].model
@@ -51,6 +53,7 @@ function addData () {
     price:priceInput.value
   });
   cleanValues();
+  alert("Se ha AGREGADO satisfactoriamente")
 }
 
 // ESTA FUNCION ARMA UN NUEVO OBJETO DESDE LOS VALORES DE LOS INPUTS Y LE HACE SPLICE AL ARREGLO DE DATOS para editarlo
@@ -66,6 +69,7 @@ function editData () {
   }
   cars.splice (position, 1, nvalor)
   cleanValues();
+  alert("Se ha EDITADO satisfactoriamente")
 }
 
 
@@ -74,9 +78,10 @@ function deleteCars () {
   const position = idInput.value;
   cars.splice (position, 1)
   cleanValues();
-  alert("Se ha eliminado este registro")
+  alert("Se ha ELIMINADO este registro")
 }
 
+// FUNCION REUTILIZABLE PARA LIMPIAR VALORES DE LOS INPUTS
 function cleanValues (){
   idInput.value = '';
   brandInput.value = '';

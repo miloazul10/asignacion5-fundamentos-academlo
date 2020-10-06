@@ -6,3 +6,17 @@
 tr:hover {
 background-color: skyblue;
 }
+
+.statusActive {
+  background-color: rgb(92, 187, 224);
+}
+
+h1 {
+  text-align: center ;
+}
+
+#dataTable {
+
+  display: flex;
+  justify-content: center;
+}

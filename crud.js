@@ -23,6 +23,37 @@ printCars();
 // Aqui se lee el id estampado y con el se mandan a llamar los datos a los inputs
 
 function loadData(indexArray) {
+  let activeState = document.getElementById(indexArray);
+  mainTbody.innerHTML = ''
+  for(let i = 0; i < cars.length; i++) {
+    if (i!=indexArray){
+      const row = `<tr id = "${i}" onClick = "loadData(${i})">
+                      <td>${cars[i].id}</td>
+                      <td>${cars[i].brand}</td>
+                      <td>${cars[i].model}</td>
+                      <td>${cars[i].color}</td>
+                      <td>${cars[i].year}</td>
+                      <td> $ ${cars[i].price}</td>
+
+                  </tr>`
+                  mainTbody.innerHTML += row;
+    // AQUI LO QUE ESTOY HACIENDO ES QUE SE QUEDE CON FONDO CELESTE LA FILA QUE SELECCIONEMOS PARA TRABAJAR
+    }
+    else{
+      const row = `<tr id = "${i}" onClick = "loadData(${i})" class = "statusActive">
+                      <td>${cars[i].id}</td>
+                      <td>${cars[i].brand}</td>
+                      <td>${cars[i].model}</td>
+                      <td>${cars[i].color}</td>
+                      <td>${cars[i].year}</td>
+                      <td> $ ${cars[i].price}</td>
+                    </tr>`
+                  mainTbody.innerHTML += row;
+
+    }
+  }
+
+  // AQUI SE LLENAN LOS INPUTS
   let wichSelect = indexArray;
   idInput.value = cars[wichSelect].id
   brandInput.value = cars[wichSelect].brand

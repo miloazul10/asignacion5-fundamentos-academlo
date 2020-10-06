@@ -1,14 +1,6 @@
 import cars from './cars.js';
-// function printCars() {
-//   for(let i = 0; i < cars.length; i++) {
-//       const row = '<tr><td>'+cars[i].brand+'</td><td>' + cars[i].model + '</td></tr>'
-//       mainTbody.innerHTML += row;
-//   }
-// }
 
-
-// al inicio de esta funcion SE ESCRIBE EL ID EN CADA FILA DE LA TABLA PARA LUEGO SER PASADO COMO PARAMETRO CUANDO SE DE CLICK y se active la funcion loadData
-// Que lleva consigo el id del array que se selecciono
+// Esta funcion imprime el ID que es el mismo que el inidice en el html para que cada fila teng su id estampado
 
 function printCars() {
   mainTbody.innerHTML = ''
@@ -26,24 +18,22 @@ function printCars() {
   }
 }
 
+printCars();
 
-// ESTA FUNCION RECIBE EL DATO DE QUE FILA FUE SELECCIONADA EN EL HTML Y CARGA LOS DATOS EN LOS INPUTS
+// Aqui se lee el id estampado y con el se mandan a llamar los datos a los inputs
+
 function loadData(indexArray) {
   let wichSelect = indexArray;
-  active = document.getElementById(wichSelect)
-  
   idInput.value = cars[wichSelect].id
   brandInput.value = cars[wichSelect].brand
   modelInput.value = cars[wichSelect].model
   colorInput.value = cars[wichSelect].color
   yearInput.value = cars[wichSelect].year
   priceInput.value = cars[wichSelect].price 
-  // return wichSelect()
-  // alert(wichSelect)
 }
 
-// ESTA FUNCION ARMA UN NUEVO OBJETO DESDE LOS VALORES DE LOS INPUTS Y LE HACE PUSH AL ARREGLO DE DATOS
-function addData () {
+// Funcion para agregar datos 
+function addData() {
    cars.push({
     id:cars.length+1,
     brand: brandInput.value,
@@ -53,13 +43,13 @@ function addData () {
     price:priceInput.value
   });
   cleanValues();
-  alert("Se ha AGREGADO satisfactoriamente")
+  alert("¡Exito! Registro CREADO")
 }
 
-// ESTA FUNCION ARMA UN NUEVO OBJETO DESDE LOS VALORES DE LOS INPUTS Y LE HACE SPLICE AL ARREGLO DE DATOS para editarlo
+// funcion para editar los datos
 function editData () {
   const position = idInput.value;
-  let nvalor = {
+  let newValue = {
     id: 1, 
     brand: brandInput.value, 
     model: modelInput.value, 
@@ -67,21 +57,27 @@ function editData () {
     year: yearInput.value, 
     price: priceInput.value
   }
-  cars.splice (position, 1, nvalor)
+  cars.splice (position, 1, newValue)
   cleanValues();
-  alert("Se ha EDITADO satisfactoriamente")
+  alert("¡Exito! Registro EDITADO")
 }
 
 
-// ELIMINAR CARROS
-function deleteCars () {
-  const position = idInput.value;
-  cars.splice (position, 1)
-  cleanValues();
-  alert("Se ha ELIMINADO este registro")
-}
+// Funcion para eliminar los datos
+function deleteCars() {
+  let indicador = idInput.value;
+  if (indicador == cars.length){
+    cars.pull
+  } else {
+    cars.splice (indicador, 1)
+  printCars()
+          }
+  }
+  
+  // alert("¡Exito! Registro ELIMINADO")
 
-// FUNCION REUTILIZABLE PARA LIMPIAR VALORES DE LOS INPUTS
+
+// funcion para limpiar los inputs
 function cleanValues (){
   idInput.value = '';
   brandInput.value = '';
@@ -91,9 +87,6 @@ function cleanValues (){
   priceInput.value = '';
   printCars();
 }
-
-
-printCars();
 
 window.printCars = printCars;
 window.loadData = loadData;
